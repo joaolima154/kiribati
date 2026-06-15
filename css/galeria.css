@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    overflow-x:hidden;
+}
+
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    padding:25px 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:55px;
+}
+
+.logo-text h1{
+    color:white;
+    font-size:38px;
+    letter-spacing:2px;
+}
+
+.logo-text p{
+    color:white;
+    opacity:.8;
+    font-style:italic;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd12d;
+}
+
+
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,22,61,.65), rgba(0,22,61,.65)),
+    url("https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=2000");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    padding:0 80px;
+}
+
+.hero-content{
+    color:white;
+    max-width:700px;
+}
+
+.hero span{
+    color:#ffd12d;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.hero h2{
+    font-size:100px;
+    margin:20px 0;
+}
+
+.wave{
+    width:250px;
+    height:8px;
+    background:#00d9ff;
+    border-radius:50px;
+    margin-bottom:30px;
+}
+
+.hero p{
+    font-size:24px;
+    line-height:38px;
+}
+
+/* GALERIA */
+
+.galeria{
+    padding:100px 70px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.foto{
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.foto img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.foto:hover img{
+    transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+    background:#001d42;
+    padding:40px;
+    text-align:center;
+}
+
+footer p{
+    color:#c9d5e8;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1200px){
+
+    .galeria{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h2{
+        font-size:70px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+        padding:0 25px;
+    }
+
+    .hero h2{
+        font-size:50px;
+    }
+
+    .galeria{
+        grid-template-columns:1fr;
+        padding:70px 25px;
+    }
+
+}
